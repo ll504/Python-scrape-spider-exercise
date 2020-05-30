@@ -5,11 +5,10 @@ import time
 import re
 
 
-encoding = 'utf-8'
 
 base_url = 'http://www.ziroom.com'
 
-header={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68'}
+header={'User-Agent':your user agent}
 
 t1 = time.time()
 
