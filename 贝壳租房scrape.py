@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import csv
 import time
 
-encoding='utf-8'
+
 
 base_url= 'https://bj.zu.ke.com'
 
@@ -21,7 +21,7 @@ for page in range(1,101):
 
     url= f'{base_url}{suffix}'
 
-    header={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68'}
+    header={'User-Agent':your user agent}
 
     html=requests.get(url, headers = header).text
 
