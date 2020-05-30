@@ -5,10 +5,6 @@ import random
 import re
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 import warnings
 warnings.simplefilter("ignore")
@@ -16,11 +12,8 @@ warnings.simplefilter("ignore")
 print('\nLoading...')
 t1 = time.time()
 
-encoding = 'utf-8'
 
 base_url = 'https://bj.5i5j.com'
-
-# header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68'}
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
@@ -32,13 +25,6 @@ csv_writer.writerow(['名称','价格','结构','面积','朝向','楼层','小�
 
 print('\nStart scraping...')
 
-# suffix = '/zufang/subway/sl10/n{}/'.format(page)
-# website = f'{base_url}{suffix}'
-# # website = 'https://bj.5i5j.com/zufang/subway/sl10'
-#
-# driver.get(website)
-#
-# html = driver.page_source
 
 page = 0  #页数
 count1 = 0 #每页房源总数
@@ -119,18 +105,6 @@ while page < 100:
         count2 += 1
 
     time.sleep(5)
-
-
-    # button = driver.find_element_by_xpath("//a[contains(text(),'下一页')]")
-
-            # wait = WebDriverWait(driver,3)
-            # condition = EC.element_to_be_clickable((By.XPATH, "//a[contains(text(),'下一页')]"))
-
-    # wait = WebDriverWait(driver,15)
-    # button = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, u"下一页")))
-    # driver.find_element_by_link_text(u"下一页").click()
-    # driver.execute_script("arguments[0].click();", button)
-    # driver.find_element_by_xpath("//a[contains(text(),'下一页')]").click()
 
 
 driver.quit()
