@@ -110,8 +110,6 @@ csv_file.close()
 
 t2 = time.time()-t1
 print(t2)
-# t3 = str(datetime.timedelta(seconds=t2))
 
-# print('\nTime spent: %.d s' % t3)
 
 
